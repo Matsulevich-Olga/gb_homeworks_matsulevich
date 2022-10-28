@@ -1,6 +1,6 @@
-﻿int number1 = 25;
-int number2 = 0;
-int number3 = 5;
+﻿int number1 = 22;
+int number2 = 3;
+int number3 = 9;
 int max = 0;
 if (number1 > number2)
 {
