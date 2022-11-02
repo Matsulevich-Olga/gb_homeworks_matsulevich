@@ -1,14 +1,14 @@
 ## Задача 25. 
 Напишите метод, который принимает на вход два числа (A и B) и возводит число A в целую степень B.
 
-[Блок-схема](Task19/diagram.drawio.png) | [Код](Task19/Program.cs)
+[Блок-схема](Task25/diagram.drawio.png) | [Код](Task25/Program.cs)
 
 ## Задача 27. 
 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-[Блок-схема](Task23/diagram.drawio.png) | [Код](Task23/Program.cs)
+[Блок-схема](Task27/diagram.drawio.png) | [Код](Task27/Program.cs)
 
 ## Задача 29. 
 Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
 
-[Блок-схема](Task21/diagram.drawio.png) | [Код](Task21/Program.cs)
+[Блок-схема](Task29/diagram.drawio.png) | [Код](Task29/Program.cs)
