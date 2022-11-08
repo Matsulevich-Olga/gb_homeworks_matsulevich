@@ -1,8 +1,8 @@
 ﻿//Cоздание двумерного массива.
 
-double[,] createArray(double n, double m)
+double[,] createArray(int m, int n)
 {
-    double[,] array = new double[n, m];
+    double[,] array = new double[m, n];
     return array;
 }
 
@@ -11,10 +11,11 @@ double[,] createArray(double n, double m)
 double[,] fillArray(double[,] array, double min, double max)
 {
     Random rand = new Random();
-    for (double i = 0; i < array.GetLength(0); i++)
-        for (double j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = rand.Next(min, max);
+            var next = rand.NextDouble();
+            array[i, j] = min + next * (max - min);
         }
     return array;
 }
@@ -22,25 +23,27 @@ double[,] fillArray(double[,] array, double min, double max)
 
 void printArray(double[,] array)
 {
-    for (double i = 0; i < array.GetLength(0); i++, Console.WriteLine(""))
-        for (double j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++, Console.WriteLine(""))
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i, j] + "\t");
+            Console.Write(Math.Round(array[i, j], 1) + "\t");
         }
 }
 
+//Метод получение числа с консоли.
+
+int ReadNumber(string str)
+{
+    Console.WriteLine(str);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
+}
+
 //Решение.
-
-Console.WriteLine("Введите количество строк");
-int n = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите количество столбцов");
-int m = Convert.ToInt32(Console.ReadLine());
-int[,] array = createArray(n, m);
-
-array = fillArray(array, 0, 100);
+int m = ReadNumber("Введите количество строк");
+int n = ReadNumber("Введите количество столбцов");
+double[,] array = createArray(m, n);
+array = fillArray(array, -10, 10);
 printArray(array);
-array = BubbleSort(array);
-Console.WriteLine("Отсортированный массив");
-printArray(array);
+
 
