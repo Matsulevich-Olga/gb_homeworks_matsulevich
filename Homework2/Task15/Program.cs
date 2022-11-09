@@ -3,13 +3,14 @@ if (day <= 7)
 {
     if (day == 6 || day == 7)
     {
-        Console.WriteLine( day + " - да");
+        Console.WriteLine(day + " - да");
     }
     else
     {
-        Console.WriteLine( day + " - нет");
+        Console.WriteLine(day + " - нет");
     }
-} else
+}
+else
 {
     Console.WriteLine("не является днем недели");
 }
