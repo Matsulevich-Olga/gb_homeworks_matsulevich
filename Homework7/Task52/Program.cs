@@ -62,23 +62,23 @@ void printDoubleArray(double[] array)
 
 double[] AverageArray(int[,] array)
 {
-    double[] avgArray = createDoubleArray(array.GetLength(0));
+    double[] avgArray = createDoubleArray(array.GetLength(1));
     avgArray = fillDoubleArray(avgArray);
 
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(1); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(0); j++)
         {
-            avgArray[i] = avgArray[i] + array[i, j];
+            avgArray[i] = avgArray[i] + array[j, i];
         }
-        avgArray[i] = avgArray[i] / array.GetLength(1);
+        avgArray[i] = avgArray[i] / array.GetLength(0);
     }
     return avgArray;
 }
 
 //Решение. 
 
-int[,] array = createArray(5, 5);
+int[,] array = createArray(5, 7);
 array = fillArray(array, 0, 10);
 printArray(array);
 Console.WriteLine("");
