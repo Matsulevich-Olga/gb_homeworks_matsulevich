@@ -1,6 +1,6 @@
-﻿//Метод рекурсивного вывода чисел от N до 1.
+﻿using static System.Console;
 
-using static System.Console;
+//Метод рекурсивного вывода чисел от N до 1.
 
 string RecursiveNumbers(int n)
 {
