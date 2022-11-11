@@ -1,6 +1,6 @@
-﻿//Метод рекурсивного подсчета суммы чисел от M до N.
+﻿using static System.Console;
 
-using static System.Console;
+//Метод рекурсивного подсчета суммы чисел от M до N.
 
 int RecursiveSum(int m, int n)
 {
